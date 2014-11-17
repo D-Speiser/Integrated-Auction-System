@@ -1,0 +1,9 @@
+Class GUI. Extend every other GUI from here.
+
+Public class MainGUI 
+
+Login/Signup GUI
+
+Search GUI
+
+List GUI

@@ -1,0 +1,31 @@
+Terminal: mysql.server start
+
+
+
+public static createUser (String user, String password)  {
+dbconnection
+check if such user exists
+if so throw an error
+else
+insert user to the db
+store session
+
+}
+
+public static void loginAsUser (String user, String password) 
+dbconnection
+check if user exists
+if not throw an error
+else
+store session
+
+public void add_data(String data_info){
+insert data_info for currentUser;
+}
+
+public static ListofItems showTheFavorites(){
+
+CurrentID = SELECT id FROM users WHERE name = currentName;
+FavoriteItems = SELECT info FROM items WHERE user_ID = CurrentID;
+return FavoriteItems;
+}

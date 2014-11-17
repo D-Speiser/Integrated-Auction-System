@@ -1,0 +1,76 @@
+CREATE TABLE users
+(
+id int NOT NULL AUTO_INCREMENT,
+username varchar(255),
+password varchar(255),
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE items
+(
+userID int NOT NULL,
+itemID int NOT NULL,
+itemInfo varchar(255),
+itemLink varchar(255),
+itemPrice varchar(255),
+itemEndDate varchar(255),
+favorites bool,
+PRIMARY KEY (itemID),
+FOREIGN KEY (userID) REFERENCES users(id)
+)
+
+SELECT * FROM users;
+
+INSERT INTO users (username, password)
+VALUES ('dude2', 'secret');
+
+
+
+INSERT INTO items (user_id, item_info, liked) 
+VALUES (1, 'awesome staff', true);
+
+CurrentId = SELECT id FROM users WHERE name = currentName;
+SELECT info FROM items WHERE user_id = CurrentId;
+
+
+
+
+itemID int NOT NULL AUTO_INCREMENT,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE users
+(
+id int NOT NULL AUTO_INCREMENT,
+username varchar(255),
+password varchar(255),
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE items
+(
+userID int NOT NULL DEFAULT 0,
+itemID int NOT NULL DEFAULT 0,
+itemInfo varchar(255) DEFAULT null,
+itemLink varchar(255) DEFAULT null,
+itemPrice varchar(255) DEFAULT null,
+itemEndDate varchar(255) DEFAULT null,
+favorites bool DEFAULT 0,
+PRIMARY KEY (itemID),
+FOREIGN KEY (userID) REFERENCES users(id)
+)
